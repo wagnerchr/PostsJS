@@ -1,0 +1,15 @@
+<h1>Lista de Postagens: </h1>
+<a href="/cad">
+    <button>Adicionar Postagem</button>
+</a>
+{{#each posts}}
+
+{{!--  Importante colocar dataValues --}}
+    <h1>{{dataValues.titulo}}</h1>
+    <p>{{dataValues.conteudo}}</p>
+    <a href="/deletar/{{dataValues.id}}">
+        <button>Deletar Postagem</button>
+    </a>
+    <hr>
+
+{{/each}}
